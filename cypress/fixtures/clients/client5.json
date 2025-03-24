@@ -1,0 +1,10 @@
+{
+  "firstname": "João",
+  "lastname": "Pereira",
+  "address": "Av. Paulista, 1500 - São Paulo, SP",
+  "number": "1500",
+  "cep": "01311300",
+  "phone": "(11) 99999-5555",
+  "email": "joao.pereira@email.com",
+  "password": "Senha@567"
+}

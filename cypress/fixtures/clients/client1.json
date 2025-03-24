@@ -1,0 +1,10 @@
+{
+  "firstname": "Lucas",
+  "lastname": "Almeida",
+  "address": "Rua das Palmeiras, 123 - São Paulo, SP",
+  "number": "123",
+  "cep": "04567890",
+  "phone": "(11) 98888-4444",
+  "email": "lucas.almeida@email.com",
+  "password": "Senha@123"
+}

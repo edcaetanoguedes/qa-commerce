@@ -1,0 +1,10 @@
+{
+  "firstname": "Carlos",
+  "lastname": "Oliveira",
+  "address": "Rua das Laranjeiras, 45 - Belo Horizonte, MG",
+  "number": "45",
+  "cep": "30190000",
+  "phone": "(31) 96666-2222",
+  "email": "carlos.oliveira@email.com",
+  "password": "Senha@789"
+}

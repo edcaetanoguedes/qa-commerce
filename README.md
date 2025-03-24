@@ -1,42 +1,61 @@
 # QA-Commerce
 
-### Loja virtual Geek para simulação de testes 
+<div class="author">
+  <p>Autor <a href="https://github.com/edcaetanoguedes">Ednaldo Guedes</a></p>
+</div>
 
-## Clonando e executando em sua máquina
+## Clone e execução local
 
-### Pré-requisito:
+### Pré-requisitos
+- Node.js - Você encontra em: https://nodejs.org/en/
+- VSCode (ou editor de sua prefrência) - você encontra em: https://code.visualstudio.com/download
+- Git: você encontra em: https://git-scm.com/downloads
 
--Node.js - Você encontra em: https://nodejs.org/en/
--Visual Studio Code ( ou editor de sua prefrência) - você encontra em: https://code.visualstudio.com/download
--Git: você encontra em: https://git-scm.com/downloads
+### Instalação
 
-Via terminal, rode os seguintes comandos:
-```  
-git clone https://github.com/fabioaraujoqa/qa-commerce.git
+- Clone o repositório `git clone https://github.com/edcaetanoguedes/qa-commerce.git`.
+- Acesse a pasta do repósitorio `cd qa-commerce`.
+- Execute `npm update` para atualizar as dependências do projeto.
+- Execute `npm install` para instalar as dependências do projeto.
+- Execute `npm install cypress cypress-cucumber-preprocessor` para instalar `Cypress` e `Cucumber`.
+- Altere o arquivo `package.json` (isso permitirá rodar os testes Cypress com `npm run cy:open`).
 ```
-```
-cd qa-commerce
-```
-
-#### Para instalar as dependencias:
-```
-npm install 
-```
-
-#### Para subir o servidor e o banco:
-```
-npm start
+"scripts": {
+    ...,
+    "cy:open": "cypress open"
+  }
 ```
 
-No console vai aparecer os endereços do site e do banco. 
-O site você acessaem: http://localhost:3000/
+### Principais dependências
+- @badeball/cypress-cucumber-preprocessor - permite a execução de testes escritos no formato Cucumber/Gherkin (`.feature` file).
+- @bahmutov/cypress-esbuild-preprocessor - permite que o cypress processe arquivos `.feature` combinados com `javascript`.
+- @bahmutov/cypress-esbuild-preprocessor - é um preprocessador para o Cypress baseado no esbuild, que melhora o desempenho dos testes ao compilar arquivos JavaScript e TypeScript.
 
-A documentação funciona em: http://localhost:3000/api-docs/
+### Para rodar o projeto
 
-*Parceria: Fábio Araújo, Bruna Emerich e Tamara Fontanella
+- Execute `npm start` para rodar o servidor e o banco de dados.
+- Acesse o site em  `http://localhost:3000`.
+- Acesse a documentação em  `http://localhost:3000/api-docs`.
+
+## Documentação
+- API: Documentada em `Swagger` (https://swagger.io/).
+
+## Testes
+As ferramentas utilizadas para testes foram `Cypress` e `Cucumber`.
+
+### Rodar testes
+
+- Execute `npm run cy:open`.
+- Abrirá uma janela do Cypress no navegador.
+- Selecione `E2E` e o navegador que deseja utilizar.
+- Outra janela de navegador abrirá.
+- No menu esquerdo selecione `Spec`, aparecerá uma lista de `.feature`.
+  - checkout-simples
+  - checkout-completo
+  - api
+- Execute o teste sequencialmente.
 
 
+## Créditos
 
-
-
-
+Projeto original de `Fábio Araújo`, `Bruna Emerich` e `Tamara Fontanella`.

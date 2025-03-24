@@ -1,0 +1,10 @@
+{
+  "firstname": "Ana",
+  "lastname": "Costa",
+  "address": "Rua do Comércio, 10 - Curitiba, PR",
+  "number": "10",
+  "cep": "80010000",
+  "phone": "(41) 95555-1111",
+  "email": "ana.costa@email.com",
+  "password": "Senha@234"
+}
