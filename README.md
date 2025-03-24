@@ -1,6 +1,6 @@
 # QA-Commerce
 
-<img src="https://visitor-badge.laobi.icu/badge?page_id=edcaetanoguedes&" />
+<img src="https://visitor-badge.laobi.icu/badge?page_id=qa-commerce&" />
 
 <div class="author">
   <p>Autor <a href="https://github.com/edcaetanoguedes">Ednaldo Guedes</a></p>
