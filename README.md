@@ -33,6 +33,8 @@
 
 ### Para rodar o projeto
 
+- É necessário criar o arquivo `.env`, e inserir a chave `SECRET_KEY` com o valor `77fd45e9dd8d1de57e2f3bac9430930bcd9baebdb3144ea5e4f414435659fd81`.
+  É estritamente não recomendado o compartilhamento de qualquer tipo de credenciais publicamente, esta é uma exceção.
 - Execute `npm start` para rodar o servidor e o banco de dados.
 - Acesse o site em  `http://localhost:3000`.
 - Acesse a documentação em  `http://localhost:3000/api-docs`.
