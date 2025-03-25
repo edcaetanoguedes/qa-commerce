@@ -1,7 +1,6 @@
 Feature: Checkout Simples
 
   Scenario: Usuário adiciona um produto ao carrinho com sucesso
-    
     Given O usuário acessa a página do produto
     When O usuário clica no botão "Adicionar ao Carrinho"
     Then O produto deve ser exibido corretamente no carrinho

@@ -25,10 +25,10 @@ Then("acessa a página de checkout", () => {
 When("preenche todos os campos obrigatórios", () => {
     // Preenche todos os campos obrigatórios
     cy.fixture(client1)
-    .then(info => {
-        checkoutPage.typeInfoUser(info)
-        index_client++;
-    })
+        .then(info => {
+            checkoutPage.typeInfoUser(info)
+            index_client++;
+        })
 })
 
 Then("seleciona a opção para criar uma conta", () => {
@@ -37,10 +37,10 @@ Then("seleciona a opção para criar uma conta", () => {
 
 Then("preenche os campos destinados à senha", () => {
     cy.fixture(client1)
-    .then(info => {
-        checkoutPage.passwordInput().type(info.password)
-        checkoutPage.repeatPasswordInput().type(info.password)
-    })
+        .then(info => {
+            checkoutPage.passwordInput().type(info.password)
+            checkoutPage.repeatPasswordInput().type(info.password)
+        })
 })
 
 Then("escolhe um método de pagamento", () => {
@@ -57,8 +57,13 @@ Then("confirma a compra", () => {
     checkoutPage.finishOrderBtn().click()
 })
 
-Then("uma mensagem de sucesso deve ser exibida",  () => {
+Then("uma mensagem de sucesso deve ser exibida", () => {
     // Verifica se a mensagem de pedio finalizado é exibida
     checkoutPage.checkValidationOrder()
 
+    cy.api_resetDatabaseUsers()
+        .then(response => {
+            expect(response.status).to.eq(200)
+            Cypress.log({ message: response.body })
+        })
 })

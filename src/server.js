@@ -663,6 +663,16 @@ app.get("/dashboard.html", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/dashboard.html"));
 });
 
+// 
+app.delete("/api/users", authenticateAdmin, (req, res) => {
+  db.run("DELETE FROM Users WHERE id != 1", function (err) {
+    if (err) {
+      return res.status(500).send({error:"Erro ao deletar o usuário."});
+    }
+    res.status(200).json({ message: "Database Usuário retornou ao estado inicial com sucesso." });
+  });
+});
+
 app.listen(port, async () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
   console.log(`Documentação rodando em http://localhost:${port}/api-docs`);

@@ -12,8 +12,6 @@ module.exports = defineConfig({
     //stepDefinitions: "cypress/support/step_definitions",
     viewportWidth: 1920,
     viewportHeight: 1080,
-    defaultCommandTimeout: 2000, // Tempo máximo para cada comando (2s)
-    slowTestThreshold: 2000,
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config)
       on("file:preprocessor", createBundler({
