@@ -29,7 +29,6 @@
 ### Principais dependências
 - @badeball/cypress-cucumber-preprocessor - permite a execução de testes escritos no formato Cucumber/Gherkin (`.feature` file).
 - @bahmutov/cypress-esbuild-preprocessor - permite que o cypress processe arquivos `.feature` combinados com `javascript`.
-- @bahmutov/cypress-esbuild-preprocessor - é um preprocessador para o Cypress baseado no esbuild, que melhora o desempenho dos testes ao compilar arquivos JavaScript e TypeScript.
 
 ### Para rodar o projeto
 
