@@ -45,6 +45,10 @@
 ## Testes
 As ferramentas utilizadas para testes foram `Cypress` e `Cucumber`.
 
+Nomeclatura:
+- Testes iniciados em `UI: ` são testes de interface do usuário.
+- Testes iniciados em `API: ` são testes de backend/API.
+
 ### Rodar testes
 
 - Execute `npm run cy:open`.

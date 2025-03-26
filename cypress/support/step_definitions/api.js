@@ -47,6 +47,6 @@ Then("o usuário deve existir na API quando consultado", () => {
     cy.api_resetDatabaseUsers()
         .then((response) => {
             expect(response.status).to.eq(200)
-            Cypress.log({ message: response.message })
+            Cypress.log({ message: response.body.message })
         })
 })

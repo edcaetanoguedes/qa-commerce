@@ -6,7 +6,7 @@ export default class BasePage {
     }
 
     // Seguir para a página do carrinho
-    toCart() {
+    goToCart() {
         cy.visit("/cart.html")
     }
 

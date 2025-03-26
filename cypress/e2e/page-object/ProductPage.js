@@ -2,16 +2,23 @@ import BasePage from "./BasePage";
 
 
 export default class ProductPage extends BasePage {
-    // Abre a página de um produto via ID
-    open(product_id) {
-        cy.visit(`/product.html?id=${product_id}`)
+    titleProductLabel() {
+        return cy.get("#product-details").get("legend")
+    }
+
+    descriptionProductLabel() {
+        return cy.get("#product-description")
+    }
+
+    priceProductLabel() {
+        return cy.get("#product-price")
     }
     
     quantityInput() {
-        return cy.get(`input[id=product-quantity]`)
+        return cy.get(`input#product-quantity`)
     }
 
-    addProductToCartBtn(id) {
-        return cy.get(`button#add-to-cart[data-id=${id}]`)
+    addProductToCartBtn() {
+        return cy.get("button").contains("Adicionar ao carrinho")
     }
 }

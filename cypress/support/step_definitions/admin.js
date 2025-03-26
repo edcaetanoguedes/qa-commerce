@@ -10,7 +10,6 @@ const user = {
 }
 
 Given("o usuário tem conta no sistema", () => {
-    counter++;
     cy.api_createNewUser(user)
         .then((response) => {
             expect(response.status).to.eq(201)
@@ -27,6 +26,14 @@ When("a requisição de reset é enviada por um admin", () => {
             })
             expect(response.status).to.eq(200)
         })
+
+    cy.api_resetDatabaseCart()
+    .then(response => {
+        Cypress.log({
+            message: response.body
+        })
+        expect(response.status).to.eq(200)
+    })
 })
 
 Then("o banco de dados é retorna para o estado inicial", () => {
@@ -38,4 +45,6 @@ Then("o banco de dados é retorna para o estado inicial", () => {
             Cypress.log({ message: "O Database só tem o usuário admin" })
         })
 })
+
+
 

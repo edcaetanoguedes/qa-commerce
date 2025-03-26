@@ -1,10 +1,9 @@
-Feature: Checkout Completo
+Feature: UI: Checkout Completo
 
   Scenario: Usuário adiciona um produto ao carrinho com sucesso
-    
-    Given O usuário acessa a página do produto
-    When O usuário clica no botão "Adicionar ao Carrinho"
-    Then O produto deve ser exibido corretamente no carrinho
+    Given O usuário acessa a página de um produto
+    When clica no botão "Adicionar ao Carrinho"
+    Then O produto deve constar no carrinho
   
   Scenario: Usuário conclui o checkout completo com sucesso
     

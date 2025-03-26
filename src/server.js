@@ -645,7 +645,6 @@ app.put("/api/users/:id", authenticateToken, (req, res) => {
 });
 
 
-
 // Rota DELETE para deletar usuários com autenticação de administrador
 app.delete("/api/users/:id", authenticateAdmin, (req, res) => {
   const { id } = req.params;
@@ -663,13 +662,26 @@ app.get("/dashboard.html", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/dashboard.html"));
 });
 
-// 
+
+
+// ROTAS somente ADMIN
+// Reseta a tabela USUÁRIOS para o estado inicial
 app.delete("/api/users", authenticateAdmin, (req, res) => {
   db.run("DELETE FROM Users WHERE id != 1", function (err) {
     if (err) {
-      return res.status(500).send({error:"Erro ao deletar o usuário."});
+      return res.status(500).send({error:"Erro ao resetar a tabela Usuários."});
     }
-    res.status(200).json({ message: "Database Usuário retornou ao estado inicial com sucesso." });
+    res.status(200).json({ message: "Tabela Usuário retornou ao estado inicial com sucesso." });
+  });
+});
+
+// Reseta a tabela CARRINHO para o estado inicial
+app.delete("/api/carrinho", authenticateAdmin, (req, res) => {
+  db.run("DELETE FROM Cart", function (err) {
+    if (err) {
+      return res.status(500).send({error:"Erro ao resetar a tabela CARRINHO."});
+    }
+    res.status(200).json({ message: "Tabela CARRINHO retornou ao estado inicial com sucesso." });
   });
 });
 

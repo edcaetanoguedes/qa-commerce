@@ -155,3 +155,19 @@ Cypress.Commands.add("api_resetDatabaseUsers", () => {
         })
     })
 })
+
+// TESTADO
+Cypress.Commands.add("api_resetDatabaseCart", () => {
+    cy.api_login(CREDENTIALS_ADMIN)
+    .then(response => {
+        expect(response.status).to.eq(200)
+
+        const token = new String(response.body.token).split(" ")[1]
+        cy.request({
+            method: "DELETE",
+            url: `/api/carrinho`,
+            headers: { ...HEADERS, "Authorization": `Bearer ${token}` },
+            failOnStatusCode: false
+        })
+    })
+})
