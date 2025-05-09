@@ -64,3 +64,5 @@ Nomeclatura:
 ## Créditos
 
 Projeto original de `Fábio Araújo`, `Bruna Emerich` e `Tamara Fontanella`.
+
+Última atualização: 09/05/2025.
